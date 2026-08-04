@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skyline — Sonic Pi EDM Skeleton</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #0b0c10;
+    --card: #14161c;
+    --text: #f2f3f5;
+    --muted: #9aa0ac;
+    --accent: #7c5cff;
+    --accent-2: #23d5c4;
+    --border: #262933;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f5f6f8;
+      --card: #ffffff;
+      --text: #14161c;
+      --muted: #5b6270;
+      --border: #e3e5ea;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(1200px 600px at 20% -10%, rgba(124,92,255,0.25), transparent 60%),
+      radial-gradient(1000px 500px at 100% 0%, rgba(35,213,196,0.18), transparent 55%),
+      var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .card {
+    width: 100%;
+    max-width: 640px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-2);
+    margin: 0 0 8px;
+  }
+  h1 {
+    margin: 0 0 4px;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+  }
+  .subtitle {
+    margin: 0 0 24px;
+    color: var(--muted);
+    font-size: 15px;
+  }
+  audio {
+    width: 100%;
+    height: 44px;
+    margin-bottom: 24px;
+  }
+  .meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .meta div {
+    background: rgba(124,92,255,0.08);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px 14px;
+  }
+  .meta .label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+  .meta .value {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .structure {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .structure span {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #0b0c10;
+  }
+  .links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 14px;
+  }
+  .links a {
+    color: var(--accent-2);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .links a:hover {
+    border-bottom-color: var(--accent-2);
+  }
+  footer {
+    margin-top: 24px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+  <main class="card">
+    <p class="eyebrow">Sonic Pi &middot; EDM Skeleton</p>
+    <h1>Skyline</h1>
+    <p class="subtitle">A ~3 minute progressive / big-room house arrangement, live-coded in Sonic Pi and rendered by running the actual audio engine.</p>
+
+    <audio controls preload="metadata" src="songs/render/skyline_edm_skeleton.mp3">
+      Your browser doesn't support inline audio. <a href="songs/render/skyline_edm_skeleton.mp3">Download the MP3</a> instead.
+    </audio>
+
+    <div class="meta">
+      <div><span class="label">Tempo</span><span class="value">128 BPM</span></div>
+      <div><span class="label">Key</span><span class="value">A minor</span></div>
+      <div><span class="label">Length</span><span class="value">3:00</span></div>
+    </div>
+
+    <div class="structure">
+      <span>Intro</span>
+      <span>Build 1</span>
+      <span>Drop 1</span>
+      <span>Breakdown</span>
+      <span>Build 2</span>
+      <span>Drop 2</span>
+      <span>Outro</span>
+    </div>
+
+    <div class="links">
+      <a href="songs/edm_skeleton.rb">View the Sonic Pi source</a>
+      <a href="songs/render/skyline_edm_skeleton.mp3">Download MP3</a>
+    </div>
+
+    <footer>Open songs/edm_skeleton.rb in Sonic Pi and press Run to hear it live, or remix any of the loops.</footer>
+  </main>
+</body>
+</html>
